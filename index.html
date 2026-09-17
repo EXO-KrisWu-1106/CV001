@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gao Ke — Visual Communication Designer portfolio resume.">
+  <title>Gao Ke — Visual Communication Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="lenis-lite.js"></script>
+</head>
+<body data-cursor-follow="root" data-scroll-animate>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor cursor-default" aria-hidden="true"></div>
+  <div class="cursor cursor-follower" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="monogram" href="#top" aria-label="Back to top" data-hide-logo-scroll><span data-bind="monogram">GK</span><span>.</span></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Primary navigation" data-mobile-nav>
+      <a href="#profile">Profile</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Selected work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="print-button g_btn" type="button" onclick="window.print()">Print CV <span>↗</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell" aria-labelledby="hero-title" data-home-preloader data-cs-hero-float>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="pulse"></span> <span data-bind="heroEyebrow"></span></p>
+        <h1 id="hero-title"><span data-bind="firstName"></span><br><em data-bind="lastName"></em><span class="period">.</span></h1>
+        <p class="hero-intro" data-bind="heroIntro"></p>
+        <div class="hero-actions">
+          <a class="button button-lime g_btn" href="#work">Explore work <span class="btn-arrow">↓</span></a>
+          <a class="text-link" data-bind-href="email" href="mailto:gaoke2026@163.com">Let's talk <span>↗</span></a>
+        </div>
+      </div>
+      <div class="hero-art reveal" aria-hidden="true" data-cursor-follow="img">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+        <div class="art-label label-top">Visual<br>thinking</div>
+        <div class="art-label label-bottom">人 · 自然<br>· 连接</div>
+        <div class="art-core"><span>GAO</span></div>
+        <div class="art-index">01 / 04</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Design disciplines">
+      <div class="ticker-track"><span>BRAND SYSTEMS</span><b>✳</b><span>EDITORIAL</span><b>✳</b><span>INTERACTIVE MEDIA</span><b>✳</b><span>VISUAL STORYTELLING</span><b>✳</b><span>BRAND SYSTEMS</span><b>✳</b><span>EDITORIAL</span></div>
+    </section>
+
+    <section id="profile" class="section-shell profile-section">
+      <div class="section-heading reveal"><span class="section-number">01</span><h2>Profile <i>个人简介</i></h2></div>
+      <div class="profile-grid">
+        <div class="profile-statement reveal"><span data-bind="profileStatement"></span></div>
+        <div class="profile-body reveal">
+          <p data-bind="profileIntro"></p>
+          <div class="quick-facts" data-module="facts"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-feature section-shell reveal">
+      <p class="mono-label">02 / DESIGN POSITION</p>
+      <h2>Make visual systems<br><em>feel human.</em></h2>
+      <p class="text-feature-copy">From an industrial catalog to an AR heart, Gao works across scales to make complex ideas clear, tactile and memorable.</p>
+    </section>
+
+    <section id="experience" class="section-shell experience-section">
+      <div class="section-heading reveal"><span class="section-number">02</span><h2>Experience <i>经历</i></h2></div>
+      <div class="timeline" data-module="experience"></div>
+    </section>
+
+    <section id="work" class="section-shell work-section">
+      <div class="section-heading reveal"><span class="section-number">03</span><h2>Selected work <i>项目精选</i></h2></div>
+      <div class="work-grid" data-module="work" data-stacking-cards></div>
+      <div class="research-strip reveal" data-module="research"></div>
+    </section>
+
+    <section class="section-shell capabilities-section">
+      <div class="section-heading reveal"><span class="section-number">04</span><h2>Capabilities <i>技能专长</i></h2></div>
+      <div class="capabilities-grid" data-module="capabilities"></div>
+    </section>
+
+    <section class="stack-section section-shell">
+      <div class="section-heading reveal"><span class="section-number">03</span><h2>Practice <i>工作方法</i></h2></div>
+      <div class="stack-cards">
+        <article class="stack-card stack-card-purple reveal"><span class="mono-label">01 / OBSERVE</span><h3>Start with<br>the question.</h3><p>Research, references and a close look at the people behind every brief.</p></article>
+        <article class="stack-card stack-card-blue reveal"><span class="mono-label">02 / BUILD</span><h3>Shape a<br>visual language.</h3><p>Systems that balance instinct, structure and a little productive friction.</p></article>
+        <article class="stack-card stack-card-orange reveal"><span class="mono-label">03 / SHARE</span><h3>Make it<br>travel.</h3><p>Clear enough to use, distinctive enough to stay with someone.</p></article>
+      </div>
+    </section>
+    <section class="bright-link-section reveal">
+      <a href="#work" class="bright-link section-shell" data-underline-link><span class="mono-label">SCROLL TO WORK</span><strong>See the<br><em>thinking</em> →</strong></a>
+    </section>
+    <section class="logo-wall section-shell reveal">
+      <div class="section-heading"><span class="section-number">06</span><h2>Visual vocabulary <i>视觉词汇</i></h2></div>
+      <div class="logo-grid" data-client-hover><span>BRAND</span><span>TYPE</span><span>FORM</span><span>STORY</span><span>AR</span><span>COLOR</span><span>IMAGE</span><span>OBJECT</span></div>
+    </section>
+    <section class="testimonial-section section-shell reveal">
+      <div class="section-heading"><span class="section-number">07</span><h2>In the studio <i>工作现场</i></h2></div>
+      <blockquote>“The best visual idea is the one that makes a complicated feeling easier to share.”</blockquote>
+      <p class="mono-label">GAO KE / VISUAL COMMUNICATION DESIGNER</p>
+    </section>
+    <section class="insights-section section-shell reveal">
+      <div class="section-heading"><span class="section-number">08</span><h2>Insights <i>设计观察</i></h2></div>
+      <div class="insights-grid" data-insights-card-hover><article><span class="mono-label">RESEARCH</span><h3>Yunnan Wamao</h3><p>Turning intangible heritage into a visual language for a younger audience.</p></article><article><span class="mono-label">EXPERIMENT</span><h3>Dye Rhythm</h3><p>Personal color, cultural memory and interface rhythm in one living system.</p></article><article><span class="mono-label">MATERIAL</span><h3>Human / Nature</h3><p>A beating heart as an invitation to imagine coexistence differently.</p></article></div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-inner section-shell reveal">
+        <p class="eyebrow"><span class="pulse"></span> Open to creative opportunities</p>
+        <h2>Let's make<br><em>something</em> felt<span class="period">.</span></h2>
+        <a class="contact-email" data-bind-href="email" href="mailto:gaoke2026@163.com"><span data-bind="emailText"></span> <span>↗</span></a>
+        <div class="contact-details"><span data-bind="phone"></span><span data-bind="location"></span><span data-bind="copyright"></span></div>
+      </div>
+      <div class="contact-shape" aria-hidden="true"></div>
+    </section>
+  </main>
+  <script src="resume-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
